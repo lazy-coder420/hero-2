@@ -5,41 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TechWave</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 </head>
-<body class=" text-white">
+<body class=" text-white inter-font">
 
   <!-- Navbar -->
 <header class="w-full bg-gradient-to-r from-[#120021] via-[#1b0033] to-[#0a0014]">
-  <div class="  max-w-7xl mx-auto  flex  items-center justify-between px-10 py-5   max-[576px]:px-4 ">
+  <div
+    class="max-w-7xl mx-auto flex items-center justify-between px-10 py-5 max-[576px]:px-4"
+  >
     <!-- Logo -->
-    <h1 class="text-2xl w-[219px] font-bold text-white">
+    <h1 class="text-2xl font-bold text-white">
       Tech<span class="text-pink-500">Wave</span>
     </h1>
 
-    <!-- Menu -->
-    <nav class="flex gap-[70px]  max-[576px]:hidden">
-      <a href="#" class="text-[16px] font-medium hover:text-white">About</a>
-      <a href="#" class="text-[16px] font-medium hover:text-white">Episodes</a>
-      <a href="#" class="text-[16px] font-medium hover:text-white">Host</a>
+    <!-- Desktop Menu -->
+    <nav class="flex gap-[70px] max-[576px]:hidden text-white">
+      <a href="#" class="text-[16px] font-medium hover:text-pink-400">About</a>
+      <a href="#" class="text-[16px] font-medium hover:text-pink-400">Episodes</a>
+      <a href="#" class="text-[16px] font-medium hover:text-pink-400">Host</a>
     </nav>
 
-    <!-- Button -->
-     <button class="bg-gradient-to-r text-white text-[16px] font-semibold from-pink-500 to-yellow-400 px-6 py-2 rounded-full flex items-center gap-2">Subscribe <span>→</span></button>
+    <!-- Subscribe Button (Desktop only) -->
+    <button
+      class="bg-gradient-to-l from-pink-500 to-yellow-400 text-white text-[16px] font-semibold px-6 py-2 rounded-full flex items-center gap-2 max-[576px]:hidden"
+    >
+      Subscribe <span>→</span>
+    </button>
 
+    <!-- Mobile Menu Bar (Font Awesome) -->
+    <div class="hidden max-[576px]:block text-white text-2xl cursor-pointer">
+      <i class="fa-solid fa-bars"></i>
+    </div>
   </div>
 </header>
 
 
 
-
-
-
-
-
-
-
-
-
+<!-- Hero Section -->
 
 <section class="relative min-h-screen bg-[url('./assets/hero-bg.png')] bg-no-repeat bg-center bg-cover flex items-center justify-center text-center px-6 ">
 
@@ -51,9 +62,9 @@
 
     <!-- Mic Wrapper (bg image + mic image) -->
     <div
-      class="w-48 h-48 rounded-full bg-[url('./assets/hero-circle.png')] bg-cover bg-center flex items-center justify-center mb-8"
+      class="w-[350px] h-[350px] rounded-full bg-[url('./assets/hero-circle.png')] bg-cover bg-center flex items-center justify-center mb-8"
     >
-      <img src="./assets/microphone.png" alt="Mic" class="w-20 h-20" />
+      <img src="./assets/microphone.png" alt="Mic" class="w-[115px] h-[115px]" />
     </div>
 
     <h1 class="text-6xl font-extrabold max-[576px]:text-3xl">
@@ -207,7 +218,7 @@
   </h2>
 
   <!-- Cards Wrapper -->
-  <div class="flex gap-6 overflow-x-auto lg:grid lg:grid-cols-3 lg:overflow-visible px-6 max-w-7xl mx-auto">
+  <div class=" gap-6 overflow-x-auto lg:grid lg:grid-cols-3 lg:overflow-visible px-6 max-w-7xl mx-auto">
 
     <!-- Card 1 -->
     <div class="w-[380px]  bg-[#250D44] rounded-2xl  overflow-hidden shadow-lg">
@@ -306,7 +317,7 @@
   <div class="max-w-6xl mx-auto bg-[#2a0f4f] rounded-[2.5rem] p-10 max-[576px]:p-6 flex flex-col md:flex-row items-center gap-10">
 
     <!-- Image -->
-    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden flex-shrink-0">
+    <div class="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden">
       <img
         src="./assets/host.png"
         alt="Alex Kumar"
@@ -348,6 +359,91 @@
 </section>
 
 
+
+
+<!-- Footer Section -->
+
+<footer class="TechWavepart">
+
+
+
+
+<div
+  class="relative min-h-[300px] flex items-center justify-center text-center
+         bg-[url('./assets/footer-bg.png')] bg-cover bg-center bg-no-repeat"
+>
+  <div class="relative z-10 w-full px-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-white">
+      Tech<span class="text-pink-500">Wave</span>
+    </h1>
+
+    <!-- GRID START -->
+    <div
+      class="place-items-center text-white text-sm flex justify-center gap-14 mt-6 flex-wrap  mx-auto
+             "
+    >
+      <div class="flex items-center gap-2 text-sm">
+        <img src="./assets/spotify.png" alt="" class="w-5 h-5">
+        Spotify
+      </div>
+
+      <div class="flex items-center gap-2 text-sm">
+        <img src="./assets/apple-podcast.png" alt="" class="w-5 h-5">
+        Apple Podcasts
+      </div>
+
+      <div class="flex items-center gap-2 text-sm">
+        <img src="./assets/youtube-podcast.png" alt="" class="w-5 h-5">
+        YouTube
+      </div>
+
+      <div class="flex items-center gap-2 text-sm">
+        <img src="./assets/twitter.png" alt="" class="w-5 h-5">
+        Twitter
+      </div>
+    </div>
+    <!-- GRID END -->
+
+    <p class="mt-8 text-sm text-gray-400">
+      © 2026 TechWave Podcast. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+
+
+<!-- <div
+  class="relative min-h-[300px] flex items-center justify-center text-center
+         bg-[url('./assets/footer-bg.png')] bg-cover bg-center bg-no-repeat ">
+  <div class="relative z-10">
+    <h1 class="text-5xl font-bold text-white">
+      Tech<span class="text-pink-500">Wave</span>
+    </h1>
+
+    <div class="flex justify-center gap-16 mt-6 text-gray-300">
+      <span class="flex items-center gap-2 text-sm"> 
+        <img src="./assets/spotify.png" alt="" class="text-2xl">
+        Spotify</span>
+      <span class="flex items-center gap-2 text-sm">
+        <img src="./assets/apple-podcast.png" alt="">
+        Apple Podcasts</span>
+      <span class="flex items-center gap-2 text-sm">
+        <img src="./assets/youtube-podcast.png" alt="">
+        YouTube</span>
+      <span class="flex items-center gap-2 text-sm">
+        <img src="./assets/twitter.png" alt="">
+        Twitter</span>
+    </div>
+
+    <p class="mt-7 text-sm text-gray-400">
+      © 2026 TechWave Podcast. All rights reserved.
+    </p>
+  </div>
+</div> -->
+
+
+</footer>
 
 
 
